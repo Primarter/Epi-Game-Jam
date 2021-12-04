@@ -2,7 +2,17 @@
     "m_SGVersion": 2,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "690e86cac8bf4a768a33c37b8cffda2c",
-    "m_Properties": [],
+    "m_Properties": [
+        {
+            "m_Id": "d7f9c52318bd4a8c9c2209aae8f2ef4b"
+        },
+        {
+            "m_Id": "094dc25d9f5d4fbab75d6c41a721377e"
+        },
+        {
+            "m_Id": "da5ebe8f31004fb399a55880bd60647b"
+        }
+    ],
     "m_Keywords": [],
     "m_Nodes": [
         {
@@ -158,6 +168,29 @@
         "g": 0.0,
         "b": 0.0,
         "a": 1.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "094dc25d9f5d4fbab75d6c41a721377e",
+    "m_Guid": {
+        "m_GuidSerialized": "db06f666-7ab5-48e3-8711-540e9f45b2da"
+    },
+    "m_Name": "Smoothness",
+    "m_DefaultReferenceName": "Vector1_094dc25d9f5d4fbab75d6c41a721377e",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
     }
 }
 
@@ -602,6 +635,52 @@
     },
     "m_Labels": [],
     "m_Space": 0
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "d7f9c52318bd4a8c9c2209aae8f2ef4b",
+    "m_Guid": {
+        "m_GuidSerialized": "1d5df947-c6f6-4385-a705-d28fec30c2a5"
+    },
+    "m_Name": "Metallic",
+    "m_DefaultReferenceName": "Vector1_d7f9c52318bd4a8c9c2209aae8f2ef4b",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "da5ebe8f31004fb399a55880bd60647b",
+    "m_Guid": {
+        "m_GuidSerialized": "672713f5-038a-4850-92f8-d4e53e228267"
+    },
+    "m_Name": "Normals",
+    "m_DefaultReferenceName": "Vector1_da5ebe8f31004fb399a55880bd60647b",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
 }
 
 {
