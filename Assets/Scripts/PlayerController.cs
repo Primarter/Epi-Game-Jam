@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float speed = 5.0f;
+    public Animator animator;
 
     private Vector3 velocity;
 
@@ -17,6 +18,10 @@ public class PlayerController : MonoBehaviour {
         velocity.x = Input.GetAxis("Horizontal");
 
         velocity = velocity.normalized;
-        transform.Translate(velocity * Time.deltaTime * speed);
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x) + Mathf.Abs(velocity.z));
+        transform.Translate(velocity * Time.deltaTime * speed, Space.World);
+        Debug.Log(transform.forward);
+        if (velocity.z != 0.0f || velocity.x != 0.0f)
+            transform.rotation = Quaternion.LookRotation(velocity);
     }
 }
