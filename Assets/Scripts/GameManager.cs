@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,6 +48,9 @@ public class GameManager : MonoBehaviour
             o.transform.position = pos;
 
             sw_around.Restart();
+        }
+        if (GameObject.FindWithTag("Player") == null) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
