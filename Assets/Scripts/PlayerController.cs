@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
         velocity = velocity.normalized;
         animator.SetFloat("Speed", Mathf.Abs(velocity.x) + Mathf.Abs(velocity.z));
         transform.Translate(velocity * Time.deltaTime * speed, Space.World);
-        Debug.Log(transform.forward);
         if (velocity.z != 0.0f || velocity.x != 0.0f)
             transform.rotation = Quaternion.LookRotation(velocity);
     }
