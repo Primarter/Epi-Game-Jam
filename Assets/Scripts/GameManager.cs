@@ -7,21 +7,46 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public GameObject m_strikeZonePrefab;
 
-    private System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+    private GameObject m_playerObject;
+
+    private System.Diagnostics.Stopwatch sw_around = new System.Diagnostics.Stopwatch();
+    private System.Diagnostics.Stopwatch sw_onTarget = new System.Diagnostics.Stopwatch();
 
     void Start()
     {
         Debug.Log("Game Started");
-        sw.Start();
+        sw_around.Start();
+        sw_onTarget.Start();
+
+        m_playerObject = GameObject.FindWithTag("Player");
     }
 
     void Update()
     {
-        if (sw.ElapsedMilliseconds > 150) {
-            GameObject o = Instantiate(m_strikeZonePrefab);
-            o.transform.position = new Vector3(Random.Range(-50f, 50f), 1, Random.Range(-50f, 50f));
+        if (!m_playerObject) return;
 
-            sw.Restart();
+        if (sw_onTarget.ElapsedMilliseconds > 2500)
+        {
+            GameObject o = Instantiate(m_strikeZonePrefab);
+
+            Vector3 pos = m_playerObject.transform.position;
+            pos.y = 1f;
+            o.transform.position = pos;
+
+            sw_onTarget.Restart();
+        }
+
+        if (sw_around.ElapsedMilliseconds > 150) {
+            GameObject o = Instantiate(m_strikeZonePrefab);
+
+            Vector3 pos = m_playerObject.transform.position;
+            float maxDist = 25f;
+            pos.y = 1f;
+            pos.x += Random.Range(-maxDist, maxDist);
+            pos.z += Random.Range(-maxDist, maxDist);
+            o.transform.position = pos;
+
+            sw_around.Restart();
         }
     }
 }
