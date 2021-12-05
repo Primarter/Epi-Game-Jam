@@ -18,10 +18,16 @@ public class StrikeZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sw.ElapsedMilliseconds > 1250)
+        float scale = (Mathf.Sin(sw.ElapsedMilliseconds * 0.005f) + 3f) * 0.4f;
+        this.transform.localScale = new Vector3(scale, 1f, scale);
+
+        if (sw.ElapsedMilliseconds > 1500)
         {
             GameObject o = Instantiate(m_laserPrefab);
-            o.transform.position = this.transform.position;
+
+            Vector3 pos = this.transform.position;
+            pos.y = 40;
+            o.transform.position = pos;
             Destroy(this.gameObject);
         }
     }

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (sw.ElapsedMilliseconds > 750) {
+        if (sw.ElapsedMilliseconds > 150) {
             GameObject o = Instantiate(m_strikeZonePrefab);
             o.transform.position = new Vector3(Random.Range(-50f, 50f), 1, Random.Range(-50f, 50f));
 
