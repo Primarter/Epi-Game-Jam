@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Game Started");
         sw_around.Start();
         sw_onTarget.Start();
 
@@ -24,7 +23,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!m_playerObject) return;
+        if (!m_playerObject) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
         if (sw_onTarget.ElapsedMilliseconds > 2500)
         {
@@ -48,9 +49,6 @@ public class GameManager : MonoBehaviour
             o.transform.position = pos;
 
             sw_around.Restart();
-        }
-        if (GameObject.FindWithTag("Player") == null) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

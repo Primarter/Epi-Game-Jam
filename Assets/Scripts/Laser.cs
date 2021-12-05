@@ -13,8 +13,6 @@ public class Laser : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log(other);
-
             Destroy(other.gameObject);
         }
     }
