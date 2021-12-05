@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Decede : MonoBehaviour {
 
-    private void OnTriggerEnter(Collider other) {
-        Debug.Log("collided");
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+            Debug.Log("collided");
     }
 }
