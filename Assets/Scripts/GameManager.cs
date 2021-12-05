@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    public GameObject m_rayPrefab;
+    public GameObject m_strikeZonePrefab;
 
     private System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
@@ -17,8 +17,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (sw.ElapsedMilliseconds > 1000) {
-            Instantiate(m_rayPrefab);
+        if (sw.ElapsedMilliseconds > 750) {
+            GameObject o = Instantiate(m_strikeZonePrefab);
+            o.transform.position = new Vector3(Random.Range(-50f, 50f), 1, Random.Range(-50f, 50f));
+
             sw.Restart();
         }
     }

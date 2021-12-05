@@ -22,6 +22,7 @@ public class ColdZoneManager : MonoBehaviour
         foreach (GameObject o in zoneList)
         {
             o.transform.position += new Vector3(1.5f * Time.deltaTime, 0.0f, 0.0f);
+
         }
 
         timeLeft -= Time.deltaTime;

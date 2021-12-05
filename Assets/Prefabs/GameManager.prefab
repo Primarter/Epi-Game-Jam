@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5a9b7bb43ee8e4590daf725a5e182c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_rayPrefab: {fileID: 8902055470281928536, guid: 8510efeb34e685d43bd0a2f45bd89b31, type: 3}
+  m_strikeZonePrefab: {fileID: 8438518016404985928, guid: 34fcddf30ad0b434bb0e388169e21d15, type: 3}
